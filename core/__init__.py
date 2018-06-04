@@ -1,5 +1,3 @@
-from json import dumps
-import json
 from flask import Flask, send_from_directory
 from flask_login import login_required, LoginManager, current_user
 from flask_mongoengine import MongoEngine
@@ -17,13 +15,8 @@ app.config['MONGODB_SETTINGS'] = {
     'host': 'mongodb://lab_master:lab_master1@ds147180.mlab.com:47180/adv_board'
 }
 
-
 db = MongoEngine()
 db.init_app(app)
-
-lm = LoginManager()
-lm.init_app(app)
-lm.login_view = '/auth/login'
 
 from core.controllers import user_controller
 app.register_blueprint(blueprint=user_controller.user_ctrl, url_prefix='/user')
