@@ -32,6 +32,7 @@
 ```
 
 ### GET http://127.0.0.1:5000/post/get/super-slug
+#### RETURN:
 ```JSON
   {
       "_id": {
@@ -64,9 +65,8 @@
   }
 ```
 
-
-
 ### GET http://127.0.0.1:5000/post/rate/get/5b153d2236f0572e345d63f3
+#### RETURN:
 ```JSON
   {
       "rates": [
@@ -89,8 +89,8 @@
   }
 ```
 
-
 ### GET http://127.0.0.1:5000/comment/get/5b15517636f05727b888684a
+#### RETURN:
 ```JSON
   {
       "_id": {
